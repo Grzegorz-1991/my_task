@@ -1,0 +1,70 @@
+@import 'bootstrap/dist/css/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(-60deg, #BBBBBB 50%, #E2D5D5 50%);
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 15vh;
+    position: fixed;
+    top: 0;
+}
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+nav a:nth-of-type(1), nav a:nth-of-type(2){
+    box-sizing: content-box;
+    border-bottom: solid 2px #6b705c;
+    border-right: solid 3px #6b705c;
+    background-color: #865858;
+    
+}
+// nav a:nth-of-type(1){
+    
+
+// }
+// nav a:nth-of-type(2){
+    
+// }
+nav a:hover {
+    background-color: #BDB2FF;
+    transition: 0.1s;
+}
+.btn {
+    font-size: 1.2em;
+    font-weight: 600;
+    border-width: 0.2em;
+    padding: 0 0.8em;
+    
+}
+
+.text-light {
+    font-size: 1.15em;
+    font-weight: 700;
+    font-family: 'Fira Sans', sans-serif;;
+}
+.row-all-screen {
+    height: 100vh;
+}
+.container {
+    position:relative;
+    left: 15vh;
+}
+.content {
+    position: absolute;
+    width: 105vh;
+}
+
+.form-floating > .bi-calendar-date + .datepicker_input + label {
+    padding-left: 3.5rem;
+    z-index: 3;
+  }
