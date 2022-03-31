@@ -52,6 +52,7 @@ class TaskController < ApplicationController
     end
 
     def params_task
-        params.require(:task).permit(:name,:surname,:email,:telephone,:position)
+        params.require(:task).permit(:state,:descripton,:date_of_order,:start_date,:end_time,
+        steps_attributes:[:id,:content,:worker,:_destroy])
     end
 end

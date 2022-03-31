@@ -1,0 +1,25 @@
+
+
+<div class="nested-fields">
+    <div class="field row mb-2">
+        <div class="col-md-3">
+            <%= f.label :content,'Content', class:'col-form-label font-weight-bold' %>
+            <%= f.text_field :content, class:'form-control' %>    
+        </div>
+        <div class="col-md-3">
+            <%= f.label :worker,'Worker', class:'col-form-label' %>
+            <%= f.text_field :worker, class:'form-control' %>
+        </div>  
+        <div class="col-md-3 align-self-end"> 
+            <%= link_to_remove_association 'Usuń krok', f, class:'btn btn-danger' %>
+        </div>
+    </div>
+</div>
+
+            
+
+
+    
+      
+
+
