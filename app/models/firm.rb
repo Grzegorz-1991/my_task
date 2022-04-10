@@ -1,0 +1,4 @@
+class Firm < ApplicationRecord
+    
+end
+  

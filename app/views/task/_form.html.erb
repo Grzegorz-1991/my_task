@@ -4,7 +4,8 @@
             <div class="col-12 mb-3">
                 <%= f.label :state,'Stan', class:'col-sm-2 col-form-label text-light' %>
                 <div class="col-sm-12">
-                    <%= f.text_field :state, class:'form-control' %>
+                    <%= f.select(:state, options_for_select(["Przyjęto","W trakcie","Przeterminowany"],@task.state), 
+                    {}, class:"form-control col-12 mb-3",:selected => params[:state]) %>
                 </div>
             </div>
             <div class="col-12 mb-3">
@@ -18,7 +19,7 @@
                     <div class="card-body">
                    
                             <%= f.fields_for :steps do |step| %>
-                                <%= render 'step_fields', form: step %>
+                                <%= render 'step_fields', f: step %>
                             <% end %>
                  
                         <div>
@@ -29,15 +30,19 @@
             </div>
             <div class="row mb-3">
                 <div class="col-md-4">
-                    <%= f.label :date_of_order,'Data przyjęcia', class:'col-sm-2 col-form-label text-light' %>
-                    <%= f.date_field :date_of_order, class:'form-control' %>
+                    <%= f.label :date_of_order,'Data przyjęcia', class:'col-sm-12 col-form-label text-light' %>
+                    <% if current_page?(new_task_path) %>
+                        <%= f.date_field :date_of_order, value: Date.today, class:'form-control' %>
+                    <% else %>
+                         <%= f.date_field :date_of_order, class:'form-control' %>
+                    <% end %>
                 </div>
                 <div class="col-md-4">
-                    <%= f.label :start_date,'Data rozpoczęcia', class:'col-sm-2 col-form-label text-light' %>
+                    <%= f.label :start_date,'Data rozpoczęcia', class:'col-sm-12 col-form-label text-light' %>
                     <%= f.date_field :start_date, class:'form-control' %>
                 </div>
                 <div class="col-md-4">
-                    <%= f.label :end_date,'Data zakończenia', class:'col-sm-2 col-form-label text-light' %>
+                    <%= f.label :end_date,'Data zakończenia', class:'col-sm-12 col-form-label text-light' %>
                     <%= f.date_field :end_time, class:'form-control' %>
                 </div>
             </div>

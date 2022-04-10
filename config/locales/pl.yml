@@ -1,0 +1,4 @@
+pl:
+  dates:
+    formats:
+      short: "%F"

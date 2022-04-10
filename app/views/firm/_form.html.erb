@@ -1,0 +1,58 @@
+<div class="content">
+    <div class="row justify-content-center row-all-screen align-items-center">
+        <%= form_with model: @firm, url: @edit_new, class: "shadow p-3 bg-secondary rounded col-12", local: true do |f| %>
+            <div class="row mb-3">
+                <%= f.label :firm_name,'Nazwa firmy', class:'col-sm-2 col-form-label text-light' %>
+                <div class="col-sm-10">
+                    <%= f.text_field :firm_name, class:'form-control' %>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <%= f.label :firm_nip,'NIP', class:'col-sm-2 col-form-label text-light' %>
+                <div class="col-sm-10">
+                    <%= f.text_field :firm_nip, class:'form-control' %>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <%= f.label :firm_adress_street,'Ulica', class:'col-sm-2 col-form-label text-light' %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :firm_adress_street, class:'form-control' %>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <%= f.label :firm_city,'Miasto', class:'col-sm-2 col-form-label text-light' %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :firm_city, class:'form-control' %>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <%= f.label :firm_adress_street_number,'Numer domu', class:'col-sm-12 col-form-label text-light' %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :firm_adress_street_number, class:'form-control' %>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <%= f.label :firm_adress_home_number,'Numer lokalu', class:'col-sm-12 col-form-label text-light' %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :firm_adress_home_number, class:'form-control' %>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <%= f.label :firm_zip_code,'Kod pocztowy', class:'col-sm-12 col-form-label text-light' %>
+                    <div class="col-sm-10">
+                        <%= f.text_field :firm_zip_code, class:'form-control' %>
+                    </div>
+                </div>
+            </div>
+
+
+            <p>
+                <%= f.submit "#{@new_edit_btn}",class:'btn btn-success' %>
+                <%= link_to "Powrót",firm_index_path,class:'btn btn-info' %>
+            </p>
+        <% end %>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="container ">
+    <div class="content">
+        <div class="row justify-content-center row-all-screen align-items-center">
+            <div class= "card shadow p-3 bg-secondary rounded col-12">
+                <div class="row mb-3 mr-3">
+                    <div class="col-sm-6">
+                        <label for="Nazwa firmy" class="col-sm-12 col-form-label text-light">Nazwa firmy</label>
+                        <div class="col-sm-10 form-control">
+                            <%= @firm.firm_name %>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="NIP" class="col-sm-12 col-form-label text-light">NIP</label>
+                        <div class="col-sm-10 form-control">
+                            <%= @firm.firm_nip %>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="row col-sm-12 col-form-label text-light">
+                    <h3>Adres</h3>
+                </div>
+                 <div class="row mb-3 mr-3">
+                    <div class="col-sm-6">
+                        <label for="Miasto" class="col-sm-12 col-form-label text-light">Miasto</label>
+                        <div class="col-sm-10 form-control">
+                            <%= @firm.firm_city %>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="Kod pocztowy" class="col-sm-12 col-form-label text-light">Kod pocztowy</label>
+                        <div class="col-sm-10 form-control">
+                            <%= @firm.firm_zip_code %>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="Ulica" class="col-sm-12 col-form-label text-light">Ulica</label>
+                        <div class="col-sm-10 form-control">
+                            <%= @firm.firm_adress_street %>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="Numer" class="col-sm-12 col-form-label text-light">Numer</label>
+                        <div class="col-sm-10 form-control">
+                            <%= @firm.firm_adress_street_number %>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="Numer lokalu" class="col-sm-12 col-form-label text-light">Numer lokalu</label>
+                        <div class="col-sm-10 form-control">
+                            <%= @firm.firm_adress_home_number %>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    <%= link_to "Powrót",firm_index_path,class:'btn btn-info' %>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

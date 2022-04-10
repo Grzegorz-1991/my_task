@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'welcom#index'
   resources :person
   resources :task
-  
+  resources :firm
 end

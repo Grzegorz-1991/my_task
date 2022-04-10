@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="content">
+        <div class="row justify-content-center row-all-screen align-items-center">
+            <div class="row d-block col-12">
+                <div class="row justify-content-end mb-2">
+                    <%= link_to 'Nowy', new_firm_path, class: 'btn btn-success' %>
+                </div>
+                <table class="table table-striped table-dark table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nazwa</th>
+                            <th>NIP</th>
+                            <th>Szczegóły</th>
+                            <th>Funkcje</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% @firm.each do |firm| %>
+                        <tr>
+                            <td><%= firm.firm_name %></td>
+                            <td><%= firm.firm_nip %></td>
+                            <td><%= link_to 'Szczegóły', firm_path(firm), class: "btn btn-outline-info" %>
+
+                            <td class="col-3 text-center">
+                                <%= link_to "Edytuj", edit_firm_path(firm), class: "btn btn-outline-info mr-3" %>
+                                <%= link_to "Usuń", firm_path(firm), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Na pewno usunąć?"} %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
